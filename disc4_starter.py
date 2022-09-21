@@ -1,4 +1,3 @@
-# import the random module
 import random
 
 # create the class Dice
@@ -31,8 +30,11 @@ class Dice:
 
     def num_rolls(self):
         numberolls=input("How many times would you like to roll")
-        for rolls in range(numberolls):
-            self.roll()
+        newlist=[]
+        for rolls in range(int(numberolls)):
+            newlist.append(self.roll())
+        for x in newlist:
+            print(x)
 
 
 
@@ -66,6 +68,9 @@ def main():
 
     # Print last roll
     print(six_sided)
+
+    print(six_sided.num_rolls())
+
 
     # BONUS quiz
     # Print accumulation
